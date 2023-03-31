@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include('html/_head.htm',{
-"title":"Portfolio"
-})
+
+<head>
+	<title>Portfolio</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="theme-color" content="#111111">
+	<style>
+		body {
+			opacity: 0;
+		}
+	</style>
+	<link rel="stylesheet" href="css/style.min.css?_v=20230331124445">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
 <body>
 	<div class="wrapper">
-		@@include('html/_header.htm',{})
+		<header class="header">
+			<div class="header__container">
+				<div class="header__content">
+					<a href="#" class="header__logo"><img src="img/logo.svg" width="140" height="56" alt="logo zevan"></a>
+					<div class="header__menu menu">
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item"><a href="#" data-goto=".main" class="menu__link">Home</a></li>
+								<li class="menu__item"><a href="#" data-goto=".featured-work" class="menu__link">Work</a></li>
+								<li class="menu__item"><a href="#" data-goto=".contact" class="menu__link">Contact</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
 		<main class="page">
 			<section class="page__main main">
 				<div class="main__container">
@@ -20,11 +49,10 @@
 								innovative codebased disruptive web and mobile solutions using tools like HTML, CSS,
 								javascript, SASS, gulp, GitHub etc.
 							</p>
-							<a href="mailto:rrzevan@gmail.com" class="main__button button _icon-mail"
-								aria-label="my email">rrzevan@gmail.com</a>
+							<a href="mailto:rrzevan@gmail.com" class="main__button button _icon-mail" aria-label="my email">rrzevan@gmail.com</a>
 						</div>
 						<div class="main__photo">
-							<img data-src="@img/main/photo.jpg" width="400" height="400" alt="my photo">
+							<picture><source data-srcset="img/main/photo.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/main/photo.jpg" width="400" height="400" alt="my photo"></picture>
 						</div>
 					</div>
 				</div>
@@ -34,9 +62,8 @@
 					<h2 class="featured-work__title _icon-arrow">Featured Work</h2>
 					<div class="featured-work__items">
 						<article class="featured-work__item featured-work-item">
-							<a href="https://zevaniy.github.io/wooder" target="_blank"
-								class="featured-work-item__image">
-								<img data-src="@img/works/wooder/wooder-prev.jpg" alt="wooder preview">
+							<a href="https://zevaniy.github.io/wooder" target="_blank" class="featured-work-item__image">
+								<picture><source data-srcset="img/works/wooder/wooder-prev.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/works/wooder/wooder-prev.jpg" alt="wooder preview"></picture>
 								<div class="featured-work-item__info">
 									<h3 class="featured-work-item__title">WOODER</h3>
 									<div class="featured-work-item__category">Lending</div>
@@ -51,7 +78,7 @@
 						</article>
 						<article class="featured-work__item featured-work-item">
 							<a href="https://zevaniy.github.io/goldfish" class="featured-work-item__image" target="_blank">
-								<img data-src="@img/works/goldfish/goldfish-prev.jpg" alt="goldfish preview">
+								<picture><source data-srcset="img/works/goldfish/goldfish-prev.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/works/goldfish/goldfish-prev.jpg" alt="goldfish preview"></picture>
 								<div class="featured-work-item__info">
 									<h3 class="featured-work-item__title">GOLDFISH</h3>
 									<div class="featured-work-item__category">Multi-page, on-line shop</div>
@@ -66,8 +93,7 @@
 						</article>
 						<article class="featured-work__item featured-work-item">
 							<a href="https://zevaniy.github.io/takeaway-delivery" class="featured-work-item__image" target="_blank">
-								<img data-src="@img/works/takeaway-delivery/takeaway-delivery-prev.jpg"
-									alt="takeaway-delivery preview">
+								<picture><source data-srcset="img/works/takeaway-delivery/takeaway-delivery-prev.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/works/takeaway-delivery/takeaway-delivery-prev.jpg" alt="takeaway-delivery preview"></picture>
 								<div class="featured-work-item__info">
 									<h3 class="featured-work-item__title">Takeaway-Delivery</h3>
 									<div class="featured-work-item__category">Lending, on-line shop</div>
@@ -82,7 +108,7 @@
 						</article>
 						<article class="featured-work__item featured-work-item">
 							<a href="https://zevaniy.github.io/elearn/" class="featured-work-item__image" target="_blank">
-								<img data-src="@img/works/elearn/elearn-prev.jpg" alt="eLearn preview">
+								<picture><source data-srcset="img/works/elearn/elearn-prev.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/works/elearn/elearn-prev.jpg" alt="eLearn preview"></picture>
 								<div class="featured-work-item__info">
 									<h3 class="featured-work-item__title">eLearn</h3>
 									<div class="featured-work-item__category">Lending</div>
@@ -96,7 +122,7 @@
 						</article>
 						<!-- <article class="featured-work__item featured-work-item">
 							<a href="https://zevaniy.github.io/california" class="featured-work-item__image" target="_blank">
-								<img data-src="@img/works/california/california-prev.jpg" alt="california preview">
+								<picture><source data-srcset="img/works/california/california-prev.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/works/california/california-prev.jpg" alt="california preview"></picture>
 								<div class="featured-work-item__info">
 									<h3 class="featured-work-item__title">CALIFORNIA</h3>
 									<div class="featured-work-item__category">Lending</div>
@@ -119,15 +145,37 @@
 							If you are looking to hire a web developer, I’m currently available for freelance work.
 							Сontact me and we will discuss the convenient way of communication.
 						</div>
-						<a href="mailto:rrzevan@gmail.com" class="contact__button button _icon-mail"
-							aria-label="my email">rrzevan@gmail.com</a>
+						<a href="mailto:rrzevan@gmail.com" class="contact__button button _icon-mail" aria-label="my email">rrzevan@gmail.com</a>
 					</div>
 				</div>
 			</section>
 		</main>
-		@@include('html/_footer.htm',{})
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__copy">Made by <span>zevan</span> — Copyright 2023</div>
+				<div class="footer__social social">
+					<ul class="social__list">
+						<li class="social__item">
+							<a href="https://discord.gg/HHyFEjGFuU" target="_blank" class="social__link" aria-label="discord">
+								<div class="_icon-discord"></div>
+							</a>
+						</li>
+						<li class="social__item">
+							<a href="https://t.me/zevan_iy" class="social__link" aria-label="telegram">
+								<div class="_icon-telegram"></div>
+							</a>
+						</li>
+						<li class="social__item">
+							<a href="https://github.com/zevaniy" target="_blank" class="social__link" aria-label="github">
+								<div class="_icon-github"></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
 	</div>
-	@@include('html/_js.htm',{})
+	<script src="js/app.min.js?_v=20230331124445"></script>
 </body>
 
 </html>
